@@ -1,4 +1,13 @@
 .bundle
+Gemfile.lock
 db/*.sqlite3
+db/schema.rb
 log/*.log
-tmp/
+tmp/**/*
+config/database.yml
+config/fgraph.yml
+config/s3.yml
+config/deploy.rb
+test
+public/system
+/nbproject
