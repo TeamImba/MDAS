@@ -1,0 +1,3 @@
+- @products.each do |product|
+  = link_to(image_tag(product.image_url, :alt => product.name, :title => product.name), product_url(product.permalink))
+  
