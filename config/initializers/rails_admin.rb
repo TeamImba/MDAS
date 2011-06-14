@@ -1,4 +1,4 @@
-RailsAdmin.authorize_with :cancan
+#RailsAdmin.authorize_with :cancan
 
 RailsAdmin.config do |config|
   config.model Product do
