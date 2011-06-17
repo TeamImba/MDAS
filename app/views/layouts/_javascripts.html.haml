@@ -1,6 +1,5 @@
-= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"
+= javascript_include_tag "jquery.min"
 = yield :javascripts
-
 - if !google_account_id.blank?
   :javascript
     var _gaq=[["_setAccount","#{google_account_id}"],["_trackPageview"],["_trackPageLoadTime"]];
