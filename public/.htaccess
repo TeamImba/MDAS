@@ -413,7 +413,7 @@ Options -MultiViews
 # ----------------------------------------------------------------------
 
 # You can add custom pages to handle 500 or 403 pretty easily, if you like.
-ErrorDocument 404 /404.html
+#ErrorDocument 404 /404.html
 
 
 
@@ -472,7 +472,7 @@ Options -Indexes
 
 
 # Increase cookie security
-<IfModule php5_module>
-php_value session.cookie_httponly true
-</IfModule>
+#<IfModule php5_module>
+#php_value session.cookie_httponly true
+#</IfModule>
 

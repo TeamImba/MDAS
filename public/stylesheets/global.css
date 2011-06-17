@@ -1,0 +1,51 @@
+/*
+	Name: Multiply
+	Description: Main Stylesheet
+	Coder: Grae Joquico
+*/
+@import url('reset.css');
+/*@font-face { font-family:; src: url('/fonts/'); }*/
+
+/* HTML5 tags */
+header, section, footer, aside, nav, article, figure {display: block;}
+body{background:#2d2d2d;}
+.container{width:100%;margin:0 auto;text-align: center;background:#ccc;float:left;}
+.nav{background:url('/images/navBG.png');}
+.header{background:url('/images/headerBG.png');}
+.content{background:#eae9e6 url('/images/border.png') top repeat-x;padding:10px 0;}
+.box{margin:0 auto;text-align: center;}
+nav{height:55px;}
+header{background:url('/images/banner.png');height:364px;}
+
+
+#logo{float:left;margin-top:15px;}
+#navigation{background:url('/images/navBorder.png') top left no-repeat;float:right;height:37px;padding-top:15px;}
+#navigation li{float:left;margin-left:35px;}
+#navigation li a{font-family:Georgia;color:#cedeef;text-decoration: none;font-weight: bold;font-size: 12px;text-shadow: 0px -1px 0px #31465d;}
+#navigation li a:hover{color:#e5f1fd;text-shadow: 0px 0px 1px #eee;}
+
+#content{padding-top:40px;}
+h1, h2{font-family: "Arial Black";font-size:20px;color:#456e9b;text-shadow: 0px 1px 0px #fff;float:left;width:100%;text-align: left;}
+h2{font-size:16px;}
+.imgborder{margin:20px 0;}
+.items{float:left;}
+.items li{height:230px;float:left;margin-bottom:10px;font-family:Helvetica, Arial;font-size: 12.5px;line-height: 16px;}
+.items li a{font-weight: bold;color:#2e639d;text-decoration: none;}
+.items li a:hover{color:#498ad1}
+.placeholder{background:#f4f3ef;width:202px;height:140px;border:9px solid white;margin-bottom:6px;-moz-box-shadow: 0px 1px 0px #aaa;-webkit-box-shadow: 0px 1px 0px #aaa;box-shadow: 0px 1px 0px #aaa;}
+.placeholder img{padding:5px;}
+
+#howtoBox{background:#f2f2f0;width:220px;float:left;padding:5px 0px 20px;}
+#howtoBox h2{padding:20px 10px;}
+.post-number{float:left;padding-left:10px;}
+.post-content{float:right;width:176px;text-align: left;font-family: Helvetica, Arial;color:#5b5b5b;font-size:13px;padding-right:10px;}
+#posts-list li{float:left;width:100%;border-bottom: 1px dotted #aaa;margin-bottom:10px;padding-bottom:6px;}
+#posts-list li.last{border:none;}
+#howtoBox a{font-size:12px;color:#2e639d;text-decoration: none;font-family: Helvetica, Arial;font-weight: bold;}
+#howtoBox a img{vertical-align:bottom;}
+#howtoBox .right{float:right;padding-right:10px;}
+
+#howtoBox,#twitter-box,#facebook-box{margin-bottom:10px;float:left;width:100%;text-align: left;}
+#twitter-box h2,#facebook-box h2{color:#777;}
+.icon{vertical-align: middle;margin-right:5px;}
+.socialmediabox{width:220px;float:left;margin-top:5px;}

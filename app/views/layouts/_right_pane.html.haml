@@ -1,0 +1,33 @@
+%aside{:class => "omega grid_3"}
+  =link_to(image_tag("claimyourcash.png"), "javascript:void(0)")
+  %section{:id => "howtoBox"}
+    %h2 Here's How to Win One Million Pesos:
+    %ul{ :id => "posts-list"}
+      %li
+        %section{:class => "post-number"}
+          =image_tag("listone.png")
+        %section{:class => "post-content"}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere fermentum on odio odio, interdum commodo mi.
+      %li
+        %section{:class => "post-number"}
+          =image_tag("listtwo.png")
+        %section{:class => "post-content"}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere fermentum on odio odio, interdum commodo mi.
+      %li{:class => "last"}
+        %section{:class => "post-number"}
+          =image_tag("listthree.png")
+        %section{:class => "post-content"}
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere fermentum on odio odio, interdum commodo mi.
+    =link_to("Learn More" + image_tag("learnmore.png"), "javascript:void(0)", :class => "right" )
+  %section{:id => "twitter-box"}
+    %h2
+      =image_tag("twitter.png", :class => "icon")
+      Twitter
+    .socialmediabox
+      =image_tag("tweets.png")
+  %section{:id => "facebook-box"}
+    %h2
+      =image_tag("facebook.png", :class => "icon")
+      Facebook
+    .socialmediabox
+      =image_tag("facebook.png")
