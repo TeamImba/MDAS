@@ -5,13 +5,13 @@
       = image_tag("borderContent.png", :class => "imgborder")
       %ul{:class => "items"}
         - @products.each_with_index do |product, index|
-          %li{:class => ((index.modulo(3) == 0)? "alpha" : (index.modulo(3) == 2 || index == @products.size - 1)? "omega" : "") + "grid_3"}
+          %li{:class => ((index.modulo(3) == 0)? "alpha " : (index.modulo(3) == 2 || index == @products.size - 1)? "omega " : "") + "grid_3"}
             .placeholder
-              =link_to(image_tag("macbookair.png"), "javascript:void(0)")
-            =link_to("iMac 21.5-inch: 2.5GHz", "javascript:void(0)")
+              = link_to(image_tag(product.image_url, :alt => product.name, :title => product.name, :width => "193px", :height => "113px"), product_url(product.permalink), :target => "_blank", :rel => "external")
+            =link_to(product.name, product_url(product.permalink), :target => "_blank", :rel => "external")
             %br
             %span Buy it from
-            =link_to("Kim Store", "javascript:void(0)")
+            =link_to(product.seller, product.product_url, :target => "_blank", :rel => "external")
 
       =image_tag("borderContent.png", :class => "imgborder")
       =link_to(image_tag("viewmore.png"), "javascript:void(0)")
@@ -19,7 +19,3 @@
       %br
       =link_to(image_tag("shop.png"), "javascript:void(0)")
     =render "layouts/right_pane"
-
-
-  /= link_to(image_tag(product.image_url, :alt => product.name, :title => product.name), product_url(product.permalink))
-  

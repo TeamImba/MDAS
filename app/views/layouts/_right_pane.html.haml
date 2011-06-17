@@ -18,7 +18,8 @@
           =image_tag("listthree.png")
         %section{:class => "post-content"}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere fermentum on odio odio, interdum commodo mi.
-    =link_to("Learn More" + image_tag("learnmore.png"), "javascript:void(0)", :class => "right" )
+      =link_to("Learn More #{raw image_tag("learnmore.png")}",  "javascript:void(0)", :class => "right" )
+      /=link_to( "Learn More",  "javascript:void(0)", :class => "right" )
   %section{:id => "twitter-box"}
     %h2
       =image_tag("twitter.png", :class => "icon")
@@ -30,4 +31,4 @@
       =image_tag("facebook.png", :class => "icon")
       Facebook
     .socialmediabox
-      =image_tag("facebook.png")
+      =image_tag("facebox.png")
