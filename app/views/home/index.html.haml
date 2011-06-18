@@ -12,10 +12,10 @@
             %br
             %span Buy it from
             =link_to(product.seller, product.product_url, :target => "_blank", :rel => "external")
-
-      =image_tag("borderContent.png", :class => "imgborder")
-      =link_to(image_tag("viewmore.png"), "javascript:void(0)")
+            
+      %span{:class => "imgborder"}
+      =link_to("View More items from Multiply Trusted Sellers", "javascript:void(0)", :class => "viewmore btn")
       %br
       %br
-      =link_to(image_tag("shop.png"), "javascript:void(0)")
+      =link_to("Shop at Multiply Marketplace", "javascript:void(0)", :class => "shop btn")
     =render "layouts/right_pane"
