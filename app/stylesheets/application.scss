@@ -73,11 +73,10 @@ h2{font-size:16px;}
     padding:5px;
   }
 }
-
-.post-number{
-  float:left;
-  padding-left:10px;
-}
+//.post-number{
+//  float:left;
+//  padding-left:10px;
+//}
 .post-content{
   float:right;
   width:176px;
@@ -112,6 +111,7 @@ h2{font-size:16px;}
     text-decoration: none;
     font-family: Helvetica, Arial;
     font-weight: bold;
+    margin-left:3px;
     img{
       vertical-align:bottom;
     }

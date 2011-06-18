@@ -24,10 +24,21 @@
       %span{:class => "twitterIcn"}
       Twitter
     .socialmediabox
-      =image_tag("tweets.png")
+      :javascript
+        new TWTR.Widget({ version: 2, type: 'profile', rpp: 7, interval: 6000, width: 250, height: 300,
+          theme: {
+            shell: { background: '#eae9e6', color: '#000000' },
+            tweets: { background: '#eae9e6', color: '#000000', links: '#456f9b' }
+          },
+          features: { scrollbar: false, loop: false, live: false, hashtags: true, timestamp: true, avatars: false, behavior: 'all' }
+        }).render().setUser('shopatmultiply').start();
   %section{:id => "facebook-box"}
     %h2
       %span{:class => "facebookIcn"}
       Facebook
     .socialmediabox
-      =image_tag("facebox.png")
+      =link_to("Shop at Multiply", "//www.facebook.com/shopatmultiply", :target => "_TOP", :style => "font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;", :title => "Shop at Multiply")
+      %br
+      =link_to(image_tag("//badge.facebook.com/badge/172651079453591.1937.470419547.png", :width => "120", :height => "400", :style => "border:0px"), "http://www.facebook.com/shopatmultiply", :target => "_TOP", :title => "Shop at Multiply")
+      %br
+      =link_to("Promote Your Page Too", "//www.facebook.com/business/dashboard/", :target => "_TOP", :style => "font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;", :title => "Make your own badge!")
