@@ -1,0 +1,33 @@
+%div{ :style => "display:none"}
+  #registeredBox{ :style => "background:#eae9e6;overflow:hidden"}
+    %section{ :class => "nav formheader"}
+      %section{ :id => "logo"}
+        &nbsp;
+        =link_to(image_tag("multiply.png"), "//multiply.com")
+    %section{ :id => "registered" }
+      %p
+        %strong Hey, thanks for registering!
+        %br/
+        %br/
+        Just a gentle reminder, only completed online purchases from Multiply merchants will entitle you to join the raffle. At the same time, orders with a minimum of Php 1,000 is equivalent to only to (1) one raffle entry. So better make sure to keep track of your order numbers!
+        %br/
+        %br/
+        Happy Shopping!
+        %br/
+        %br/
+        The Multiply Philippines Team
+      %br/
+      =link_to("Shop at Multiply", "//multiply.com/marketplace", :rel => "external", :target => "_blank", :class => "shop btn shopreg")
+      %br/
+      #addSocial
+        or tell your friends about Multiply on
+        %br/
+        %ul{:id => "socialBtn"}
+          %li
+            %a{:href => "javascript:void(0)"}
+              %span{:class => "facebookIcn"}
+              Facebook
+          %li
+            %a{:href => "javascript:void(0)"}
+              %span{:class => "twitterIcn"}
+              Twitter

@@ -2,7 +2,7 @@
 -ie_html :class => 'no-js', :lang => 'en' do
   %head
     = render "layouts/head", :stylesheet_partial => "layouts/stylesheets"
-  %body{ :class => "home", :id => "index" }    
+  %body{ :class => "home", :id => "index" }
     %section{ :class => "nav container" }
       %nav{ :class => "box container_12" }
         %section{ :id => "logo" }
@@ -17,3 +17,5 @@
     = yield
     %footer{ :class => "box container_12" }
     = render "layouts/javascripts"
+    = render "layouts/signup"
+    = render "layouts/signup_complete"

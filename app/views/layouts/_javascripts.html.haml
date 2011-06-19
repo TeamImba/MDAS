@@ -1,4 +1,45 @@
-= javascript_include_tag "jquery.min", "jquery.colorbox.min"
+= javascript_include_tag "jquery.min", "jquery.colorbox.min", "jquery.validate.min"
+:javascript
+  $(document).ready(function(){
+    $(".forms").colorbox({width:"600px", inline:true, href:"#signupform" });
+    $("input").live("blur", function(){
+      if($(this).valid() == 0)
+        $(this).css("background-color", "red");
+      else
+        $(this).css("background-color", "");
+    });
+    $("#signup_form").validate({
+     submitHandler: function(form){
+      $("#submit_btn").attr("disabled", true);
+      $.ajax({
+        type: 'POST',
+        url: '/home',
+        data: $("#signup_form").serialize(),
+        beforeSend: function(){
+          $("#submit_loader").show();
+        },
+        success: function(){
+          $.colorbox({width:"400px;", inline:true, href:"#registeredBox"});
+        },
+        complete:function(){
+          $("#submit_loader").hide();
+          $("input").each(function(){
+            $(this).val("");
+          });
+        }
+      });
+     }
+    });
+    $("#signup_form").live("submit", function(e){
+      e.preventDefault();
+      $("input").each(function(index,element){
+        if($(this).valid() == 0)
+          $(this).css("background-color", "red");
+        else
+          $(this).css("background-color", "");
+      });
+    });
+  });
 = yield :javascripts
 - if !google_account_id.blank?
   :javascript

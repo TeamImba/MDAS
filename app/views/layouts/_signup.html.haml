@@ -1,0 +1,53 @@
+%div{:style => "display:none"}
+  #signupform{ :style => "background:#fff;overflow:hidden"}
+    %section{ :class => "nav formheader"}
+      %section{ :id => "logo"}
+        &nbsp;
+        =link_to(image_tag("multiply.png"), "//multiply.com")
+    %h3 Register and get a chance to win Php 1,000,000!
+    %span{:class => "imgborder"} 
+    =form_tag(home_path, :id => "signup_form") do
+      %ul{ :id => "signup"}
+        %li{ :class => "signupForm"}
+          %ul
+            %li{ :class => "label"}
+              %h2
+                Multiply User ID
+                %span{ :class => "red"} *
+            %li{ :class => "textfield"}=text_field_tag("muid", "", :placeholder => "kimstore", :class => "required")
+        %li{ :class => "signupForm"}
+          %ul
+            %li{ :class => "label"}
+              %h2
+                First Name
+                %span{ :class => "red"} *
+            %li{ :class => "textfield"}=text_field_tag("fn", "", :placeholder => "John", :class => "required")
+        %li{ :class => "signupForm"}
+          %ul
+            %li{ :class => "label"}
+              %h2
+                Last Name
+                %span{ :class => "red"} *
+            %li{ :class => "textfield"}=text_field_tag("ln", "", :placeholder => "Doe", :class => "required")
+        %li{ :class => "signupForm"}
+          %ul
+            %li{ :class => "label"}
+              %h2
+                Email
+                %span{ :class => "red"} *
+            %li{ :class => "textfield"}=text_field_tag("email", "", :placeholder => "john.doe@mail.com", :class => "required email")
+        %li{ :class => "signupForm"}
+          %ul
+            %li{ :class => "label"}
+              %h2
+                Mobile Number
+                %span{ :class => "red"} *
+            %li{ :class => "textfield"}=text_field_tag("mob", "", :placeholder => "6399912345678", :class => "required digits")
+      %button{:class => "registered submit btn", :type => "submit", :id => "submit_btn"} Submit
+      =image_tag("loading.gif", :id => "submit_loader")
+    #signupDet
+      %span{:class => "red"} *
+      Required Fields
+      %br
+      %span{:class => "red"} *
+      Your information is safe with us!
