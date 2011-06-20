@@ -39,6 +39,9 @@
           $(this).css("background-color", "");
       });
     });
+    $(".viewmore").live("click", function(e){
+      $("#other_items").slideDown("1500");
+    });
   });
 = yield :javascripts
 - if !google_account_id.blank?

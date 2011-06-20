@@ -2,7 +2,7 @@ class CreateProducts < ActiveRecord::Migration
   def self.up
     create_table :products do |t|
       t.string      :name
-      t.string      :utm
+      t.integer     :position
       t.string      :product_url
       t.string      :seller
       t.string      :image_url

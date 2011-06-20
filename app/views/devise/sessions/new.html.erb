@@ -1,12 +1,33 @@
-<h2>Sign in</h2>
-
-<%= form_for(resource, :as => resource_name, :url => "/users/sign_in/") do |f| %>
-  <p><%= f.label :email %><br />
-  <%= f.email_field :email %></p>
-
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
-
-  <p><%= f.submit "Sign in" %></p>
-<%- end %>
-<%= render :partial => "devise/shared/links" %>
+<section class="content container">
+  <section id="content" class="box container_12">
+    <h2 style="text-align:center;margin-bottom:10px">Sign in</h2>
+    <%- flash.each do |key, value| -%>
+      <div class="message <%= key %>">
+        <p><%= value %></p>
+      </div>
+    <%- end -%>
+    <%= form_for(resource, :as => resource_name, :url => "/users/sign_in") do |f| %>
+      <ul id="signup">
+        <li class="signupForm">
+          <ul>
+            <li class="label"><h2>Email</h2></li>
+            <li class="textfield"><%= f.email_field :email, :placeholder => "john.doe@mail.com" %></li>
+          </ul>
+        </li>
+        <li class="signupForm">
+          <ul>
+            <li class="label"><h2>Password</h2></li>
+            <li class="textfield"><%= f.password_field :password, :placeholder => "password" %></li>
+          </ul>
+        </li>
+        <li class="signupForm">
+          <ul>
+            <li class="label">&nbsp;</li>
+            <li class="textfield"><%= f.submit "Sign in" %></li>
+          </ul>
+        </li>
+      </ul>
+    <%- end %>
+    <%#= render :partial => "devise/shared/links" %>
+  </section>
+</section>
