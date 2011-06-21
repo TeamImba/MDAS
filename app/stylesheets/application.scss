@@ -126,7 +126,9 @@ h2{font-size:16px;}
 }
 
 #howtoBox,#twitter-box,#facebook-box{margin-bottom:10px;float:left;width:100%;text-align: left;}
+#twitter-box{padding-top:5px;}
 #twitter-box h2,#facebook-box h2{color:#777;}
+#twitter-box h2{color:#777; line-height:23px;}
 .icon{vertical-align: middle;margin-right:5px;}
 .socialmediabox{width:220px;float:left;margin-top:5px;}
 
@@ -166,7 +168,7 @@ li.textfield{float:left;margin-left:20px;}
 .second{background:url('/images/buttons.png') -1204px -5px;}
 .third{background:url('/images/buttons.png') -1220px -5px;}
 .learnmore{background:url('/images/buttons.png') -1236px -5px;height:13px;width:13px;float:right;margin-top:2px;}
-.twitterIcn{background:url('/images/buttons.png') -1142px -5px;width:23px;height:23px;float:left;}
+.twitterIcn{background:url('/images/buttons.png') -1142px -5px;width:23px;height:23px;float:left; margin-right:5px;}
 .facebookIcn{background:url('/images/buttons.png') -1165px -5px;width:23px;height:23px;float:left;}
 ul.right{float:right;width:84px}
 .right li{float:left;}

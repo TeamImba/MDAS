@@ -23,11 +23,17 @@
         <li class="signupForm">
           <ul>
             <li class="label">&nbsp;</li>
-            <li class="textfield"><%= f.submit "Sign in" %></li>
+            <li class="textfield"><%= f.submit "Sign in" %>
+            <%- if Rails.env == "development" %>
+            | <fb:login-button autologoutlink="true" perms="email,offline_access,publish_stream,user_about_me,user_birthday,user_interests,user_likes,user_location,user_status,read_friendlists"></fb:login-button>
+            <%- end -%>
+            </li>
           </ul>
         </li>
       </ul>
     <%- end %>
-    <%#= render :partial => "devise/shared/links" %>
+    <%- if Rails.env == "development" %>
+      <%= render :partial => "layouts/fb_login" %>
+    <%- end -%>
   </section>
 </section>

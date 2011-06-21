@@ -1,0 +1,28 @@
+<div id='fb-root'></div> 
+<script type='text/javascript'> 
+window.afterFbAsyncInit = function() {
+  FB.Event.subscribe('auth.login', function(response) {
+    doAjax('/user_sessions/create_with_fb', null);
+  });
+  FB.Event.subscribe('auth.logout', function(response) {
+    doAjax('logout', null);
+  });
+}
+window.fbAsyncInit = function() {
+  FB.init({appId: '162199843817522', status: true, cookie: true, xfbml: true});
+  if (window.afterFbAsyncInit)
+    window.afterFbAsyncInit();
+};
+(function() {
+  var e = document.createElement('script'); e.async = true;
+  e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+  document.getElementById('fb-root').appendChild(e);
+}());
+function doAjax(url, data){
+  $.ajax({ url: url, dataType : "html", type: "GET", data: data, 
+    success: function(response){
+      $.colorbox.close();
+    }
+  });
+}
+</script>
