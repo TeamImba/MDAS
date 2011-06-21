@@ -12,6 +12,22 @@
 
 ActiveRecord::Schema.define(:version => 20110614211931) do
 
+  create_table "articles", :force => true do |t|
+    t.integer  "post_id"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "product_analytics", :force => true do |t|
     t.integer  "product_id"
     t.string   "referer"
