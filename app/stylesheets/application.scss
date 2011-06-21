@@ -131,7 +131,7 @@ h2{font-size:16px;}
 .socialmediabox{width:220px;float:left;margin-top:5px;}
 
 #signup{float:left;padding-top:20px;}
-h3{float:left;font-family: Helvetica, Arial;font-weight: bold;color:#444;font-size:18px;margin:10px 0;}
+h3.register{float:left;font-family: Helvetica, Arial;font-weight: bold;color:#444;font-size:18px;margin:10px 0;}
 #signupForm{margin:0 auto;text-align: center;}
 //.signupForm{float:left;width:100%;margin-bottom:10px;}
 li.label{
@@ -214,7 +214,6 @@ label.error{display:none !important}
 #cboxLoadingGraphic{background:url('/images/loading.gif') no-repeat center center;}
 #cboxTitle{position:absolute; bottom:-25px; left:0; text-align:center; width:100%; font-weight:bold; color:#7C7C7C;}
 #cboxCurrent{position:absolute; bottom:-25px; left:58px; font-weight:bold; color:#7C7C7C;}
-
 #cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{position:absolute; bottom:-29px; background:url('/images/controls.png') no-repeat 0px 0px; width:23px; height:23px; text-indent:-9999px;}
 #cboxPrevious{left:0px; background-position: -51px -25px;}
 #cboxPrevious.hover{background-position:-51px 0px;}
@@ -222,12 +221,10 @@ label.error{display:none !important}
 #cboxNext.hover{background-position:-75px 0px;}
 #cboxClose{right:0; background-position:-100px -25px;}
 #cboxClose.hover{background-position:-100px 0px;}
-
 .cboxSlideshow_on #cboxSlideshow{background-position:-125px 0px; right:27px;}
 .cboxSlideshow_on #cboxSlideshow.hover{background-position:-150px 0px;}
 .cboxSlideshow_off #cboxSlideshow{background-position:-150px -25px; right:27px;}
 .cboxSlideshow_off #cboxSlideshow.hover{background-position:-125px 0px;}
-
 
 /* Containers
 ----------------------------------------------------------------------------------------------------*/

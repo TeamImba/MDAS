@@ -25,10 +25,10 @@
       Twitter
     .socialmediabox
       :javascript
-        new TWTR.Widget({ version: 2, type: 'profile', rpp: 7, interval: 6000, width: 250, height: 300,
+        new TWTR.Widget({ version: 2, type: "profile", rpp: 7, interval: 6000, width: 250, height: 300, creator: true,
           theme: {
-            shell: { background: '#eae9e6', color: '#000000' },
-            tweets: { background: '#eae9e6', color: '#000000', links: '#456f9b' }
+            shell: { background: "#eae9e6", color: "#000000" },
+            tweets: { background: "#eae9e6", color: "#000000", links: "#456f9b" }
           },
           features: { scrollbar: false, loop: false, live: false, hashtags: true, timestamp: true, avatars: false, behavior: 'all' }
         }).render().setUser('shopatmultiply').start();

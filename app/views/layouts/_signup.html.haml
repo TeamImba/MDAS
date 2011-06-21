@@ -4,7 +4,7 @@
       %section{ :id => "logo"}
         &nbsp;
         =link_to(image_tag("multiply.png"), "http://multiply.com?utm_source=semmicrosite%2B&utm_medium=link%2B&utm_campaign=semmicrosite%2B")
-    %h3 Register and get a chance to win Php 1,000,000!
+    %h3{:class => "register"} Register and get a chance to win Php 1,000,000!
     %span{:class => "imgborder"} 
     =form_tag(home_path, :id => "signup_form") do
       %ul{ :id => "signup"}

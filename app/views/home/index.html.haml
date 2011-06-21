@@ -13,14 +13,16 @@
             %span Buy it from
             =link_to(product.seller, "http://#{product.seller.delete(" ").downcase}.multiply.com", :target => "_blank", :rel => "external")
       %ul{:class => "items", :id => "other_items", :style => "display:none;"}
-        - @products[12..-1].each_with_index do |product, index|
-          %li{:class => ((index.modulo(3) == 0)? "alpha " : (index.modulo(3) == 2 || index == @products.size - 1)? "omega " : "") + "grid_3"}
-            .placeholder
-              = link_to(image_tag(product.image_url, :alt => product.name, :title => "Buy #{product.name}", :width => "193px", :height => "113px"), product_url(product.permalink), :target => "_blank", :rel => "external")
-            =link_to(product.name, product_url(product.permalink), :target => "_blank", :rel => "external")
-            %br
-            %span Buy it from
-            =link_to(product.seller, "http://#{product.seller.delete(" ").downcase}.multiply.com", :target => "_blank", :rel => "external")
+        - begin
+          - @products[12..-1].each_with_index do |product, index|
+            %li{:class => ((index.modulo(3) == 0)? "alpha " : (index.modulo(3) == 2 || index == @products.size - 1)? "omega " : "") + "grid_3"}
+              .placeholder
+                = link_to(image_tag(product.image_url, :alt => product.name, :title => "Buy #{product.name}", :width => "193px", :height => "113px"), product_url(product.permalink), :target => "_blank", :rel => "external")
+              =link_to(product.name, product_url(product.permalink), :target => "_blank", :rel => "external")
+              %br
+              %span Buy it from
+              =link_to(product.seller, "http://#{product.seller.delete(" ").downcase}.multiply.com", :target => "_blank", :rel => "external")
+        - rescue
       %span{:class => "imgborder"}
       =link_to("View More items from Multiply Trusted Sellers", "javascript:void(0)", :class => "viewmore btn")
       %br
