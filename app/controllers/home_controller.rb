@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   end
   
   def show
-    @product = Product.find(params[:id])
+    @product = Product.find(params[:id].split("_")[0])
     @product.view_count = @product.view_count.to_i + 1
     @product.save
     redirect_to  "#{@product.product_url}?utm_source=semmicrosite%2B&utm_medium=link%2B&utm_campaign=semmicrosite%2B"
