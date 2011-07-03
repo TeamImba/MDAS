@@ -65,7 +65,7 @@ h2{font-size:16px;}
 }
 .placeholder{
   background:#f4f3ef;
-  width:202px;
+  width:148px;
   height:140px;
   border:9px solid white;
   margin-bottom:6px;
@@ -73,9 +73,12 @@ h2{font-size:16px;}
   -webkit-box-shadow: 0px 1px 0px #aaa;
   box-shadow: 0px 1px 0px #aaa;
   img{
-    padding:5px;
+//    padding:5px;
   }
 }
+li.product{margin-left:12px;width:166px;}
+li.first{margin-left:0;}
+li.last{margin-right:0;}
 //.post-number{
 //  float:left;
 //  padding-left:10px;
@@ -104,7 +107,7 @@ h2{font-size:16px;}
   background:#f2f2f0;
   width:220px;
   float:left;
-  padding:5px 0px 20px;
+  padding:5px 0px 0px;
   h2{
     padding:20px 10px;
   }
@@ -156,20 +159,45 @@ li.textfield{float:left;margin-left:20px;}
   }
 }
 
+//.submit:hover{}
+
+
+
 .red{color:red;}
 //.error{font-family:Helvetica, Arial;color:black;font-size:12px;float:left;padding:10px;background:#f6918e;border:1px solid #bb0101;width:550px;margin-bottom:10px;display:none}
 .btn{text-indent:-9999px;}
-.viewmore{background:url('/images/buttons.png') -220px -5px;width:422px;height:60px;float:left;margin-left:140px;}
-.shop{background:url('/images/buttons.png') -642px -5px;width:280px;height:51px;float:left;margin-left:211px;}
+.viewmore{
+  background:url('/images/buttons.png') -220px -5px;width:422px;height:60px;float:left;margin-left:140px;
+  &:hover{
+    background:url('/images/buttons.png') -220px -65px;width:422px;height:60px;float:left;margin-left:140px;
+  }
+}
+.shop{
+  background:url('/images/buttons.png') -642px -5px;width:280px;height:51px;float:left;margin-left:211px;
+  &:hover{
+    background:url('/images/buttons.png') -642px -65px;
+  }
+}
+.claim{
+  background:url('/images/buttons.png') 0px -5px;width:220px;height:53px;float:left;
+  &:hover{
+    background:url('/images/buttons.png') 0px -65px;width:220px;height:53px;float:left;
+  }
+}
+.submit{
+  background:url('/images/buttons.png') -922px -5px;width:220px;height:53px;float:left;margin-left:180px;margin-top:10px;
+  &:hover{
+    background:url('/images/buttons.png') -922px -65px;width:220px;height:53px;float:left;margin-left:180px;margin-top:10px;
+  }
+}
 .shopreg{margin-left:35px;}
-.claim{background:url('/images/buttons.png') 0px -5px;width:220px;height:53px;float:left;}
-.submit{background:url('/images/buttons.png') -922px -5px;width:220px;height:53px;float:left;margin-left:180px;margin-top:10px;}
 .post-number{background:url('/images/buttons.png') -1188px -5px;width:16px;height:16px;float:left;margin-left:10px;}
 .second{background:url('/images/buttons.png') -1204px -5px;}
 .third{background:url('/images/buttons.png') -1220px -5px;}
 .learnmore{background:url('/images/buttons.png') -1236px -5px;height:13px;width:13px;float:right;margin-top:2px;}
 .twitterIcn{background:url('/images/buttons.png') -1142px -5px;width:23px;height:23px;float:left; margin-right:5px;}
 .facebookIcn{background:url('/images/buttons.png') -1165px -5px;width:23px;height:23px;float:left;}
+
 ul.right{float:right;width:84px}
 .right li{float:left;}
 #socialBtn li{float:left;margin-left:17px;}
@@ -179,6 +207,24 @@ button{border:none;cursor:pointer;}
 label.error{display:none !important}
 #submit_loader{display:none;float:left;}
 //.error{font-family:Helvetica, Arial;font-size:10px;text-decoration:italic;}
+
+
+#socialBtn li{float:left;margin-left:17px;}
+#signupform .imgborder{background:url('../images/buttons.png') 0 0;height:5px;width:700px;float:left;margin:0;}
+
+
+/* Added June 19 2011 (Added "no-repeat" in header) */
+header{background:url('/images/banner.png') no-repeat;height:364px;}
+#socialmedia li{float:left;margin-right:10px;}
+
+.about{font-family:Helvetica, Arial; text-align:justify; margin-bottom:12px; line-height:22px;}
+
+//.twtr-tweets{width:220px !important;}
+//.viewmore:hover{background:url('/images/buttons.png') -220px -65px;width:422px;height:60px;float:left;margin-left:140px;}
+//.shop:hover{background:url('/images/buttons.png') -642px -65px;}
+//.claim:hover{background:url('/images/buttons.png') 0px -65px;width:220px;height:53px;float:left;}
+//.submit:hover{background:url('/images/buttons.png') -922px -65px;width:220px;height:53px;float:left;margin-left:180px;margin-top:10px;}
+
 
 /*
     ColorBox Core Style:

@@ -1,0 +1,18 @@
+%section{:class => "content container"}
+  %section{:id => "content", :class => "box container_12"}
+    =render "layouts/left_pane"
+    %section{:class => "omega grid_9"}
+      %h1 FAQs/Promo Mechanics
+      = image_tag("borderContent.png", :class => "imgborder")
+      %ol
+        %li=link_to("Who are the qualified winners for this promo?", "#")
+        %li=link_to("How do I get the shirt?", "#")
+        %li=link_to("When do I get the shirt?", "#")
+        %li=link_to("How often can I claim a shirt?", "#")
+        %li=link_to("Can I buy from multiple stores?", "#")
+        %li=link_to("How long is the promo?", "#")
+        %li=link_to("What is the Multiply Payment Facility?", "#")
+        %li=link_to("I have other questions, how can I reach Multiply Philippines?", "#")
+
+      %br
+      =link_to("Shop at Multiply Marketplace", "http://multiply.com/marketplace?utm_source=semmicrosite%2B&utm_medium=link%2B&utm_campaign=semmicrosite%2B", :class => "shop btn", :rel => "external", :target => "_blank")

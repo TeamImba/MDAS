@@ -1,0 +1,43 @@
+%aside{:class => "alpha grid_3"}
+  %ul{:id => "socialmedia"}
+    %li
+      %iframe{ :src => "http://www.facebook.com/plugins/like.php?app_id=213790775324755&amp;href=http%3A%2F%2Fwww.multiplyphilippines.com&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=21", :scrolling => "no", :frameborder => "0", :style => "border:none; overflow:visible; width:220px; height:30px;", :allowTransparency => "true"}
+    %li
+      %div
+        %a{:href => "http://twitter.com/share?url=http%3A%2F%2Fwww.multiplyphilippines.com&amp;via=shopatmultiply", :class => "twitter-share-button"} Tweet
+  %section{:id => "howtoBox"}
+    %h2 Here's How to Win One Million Pesos:
+    %ul{ :id => "posts-list"}
+      %li
+        %section{:class => "post-number first"}
+        %section{:class => "post-content"} Shop a minimum of Php 500 worth of items from any Multiply seller.
+      %li
+        %section{:class => "post-number second"}
+        %section{:class => "post-content"} Pay through the new payment facility (look for the "buy now" or "inquire" button).
+      %li{:class => "last"}
+        %section{:class => "post-number third"}
+        %section{:class => "post-content"} Register here and tell us who and where to ship the shirts to.
+  =link_to("Claim Your Cash", "javascript:void(0)", :class => "forms claim btn")
+  %section{:id => "twitter-box"}
+    %h2
+      %span{:class => "twitterIcn"}
+      Twitter
+    .socialmediabox
+      :javascript
+        new TWTR.Widget({ version: 2, type: "profile", rpp: 7, interval: 6000, width: 250, height: 300, creator: true,
+          theme: {
+            shell: { background: "#eae9e6", color: "#000000" },
+            tweets: { background: "#eae9e6", color: "#000000", links: "#456f9b" }
+          },
+          features: { scrollbar: false, loop: false, live: false, hashtags: true, timestamp: true, avatars: false, behavior: "all" }
+        }).render().setUser("shopatmultiply").start();
+  %section{:id => "facebook-box"}
+    %h2
+      %span{:class => "facebookIcn"}
+      Facebook
+    .socialmediabox
+      =link_to("Shop at Multiply", "http://www.facebook.com/shopatmultiply", :target => "_TOP", :style => "font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;", :title => "Shop at Multiply")
+      %br
+      =link_to(image_tag("http://badge.facebook.com/badge/172651079453591.1937.470419547.png", :width => "120", :height => "400", :style => "border:0px"), "http://www.facebook.com/shopatmultiply", :target => "_TOP", :title => "Shop at Multiply")
+      %br
+      =link_to("Promote Your Page Too", "//www.facebook.com/business/dashboard/", :target => "_TOP", :style => "font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;", :title => "Make your own badge!")

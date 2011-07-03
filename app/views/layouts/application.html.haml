@@ -9,13 +9,15 @@
           =link_to(image_tag("multiply.png"), root_url)
         %ul{ :id => "navigation" }
           %li=link_to("Home", root_url)
-          %li=#link_to("How to Join", root_url)
           %li=link_to("Shop at Multiply", "http://multiply.com/marketplace?utm_source=semmicrosite%2B&utm_medium=link%2B&utm_campaign=semmicrosite%2B", :rel => "external", :target => "_blank")
-          %li=#link_to("About", root_url)
-    %section{ :class => "header container"}
-      %header{ :class => "box container_12"}
+          %li=link_to("About", about_url)
+          %li=link_to("FAQs", faq_url)
+    %section{:class => "header container"}
+      %header{:class => "box container_12", :style => "height:250px;position:relative"}
+        %aside{:class => "alpha grid_3", :style => "position:absolute;width:220px;bottom:17px;right:67px"}
+          =link_to("Claim Your Cash", "javascript:void(0)", :class => 'forms claim btn', :style => "height:43px")
     = yield
-    %footer{ :class => "box container_12" }
-    = render "layouts/javascripts"
+    %footer{:class => "box container_12" }
     = render "layouts/signup"
     = render "layouts/signup_complete"
+    = render "layouts/javascripts"
