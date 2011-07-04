@@ -6,13 +6,7 @@
 %title Multiply | Buy Electronics, Gadgets, Clothing, Shoes, Toys, Games
 %link{ :rel => "shortcut icon",  :href => "/favicon.ico"}
 %link{ :rel => "apple-touch-icon",  :href => "/apple-touch-icon.ico"}
-
--# Pass in a stylesheet_partial to render inside your head
 - if local_assigns[:stylesheet_partial]
   = render :partial => local_assigns[:stylesheet_partial]
-
--# All JavaScript at the bottom, except for Modernizr and Respond.
--# Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
 = javascript_include_tag 'modernizr.min', 'respond.min', "http://widgets.twimg.com/j/2/widget.js"
-
 = csrf_meta_tag
