@@ -15,8 +15,11 @@
           %li=link_to("Promo Mechanics", promo_url)
     %section{:class => "header container"}
       %header{:class => "box container_12", :style => "height:250px;position:relative"}
-        %aside{:class => "alpha grid_3", :style => "position:absolute;width:220px;bottom:17px;right:67px"}
-          =link_to("Claim Your Cash", "javascript:void(0)", :class => 'forms claim btn', :style => "height:43px")
+        %span{:id => "dti"}
+          Per DTI NCR Permit # XXXX Series of 2011. 
+          =link_to("Click here for details.", promo_url)
+        %aside{:class => "alpha grid_3", :style => "position:absolute;width:220px;bottom:10px;right:20px"}
+          =link_to("Claim Your Shirt", "javascript:void(0)", :class => 'forms claim btn', :style => "height:43px")
     #fb-root
     :javascript
       window.fbAsyncInit = function() {
