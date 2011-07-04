@@ -16,6 +16,16 @@
       %header{:class => "box container_12", :style => "height:250px;position:relative"}
         %aside{:class => "alpha grid_3", :style => "position:absolute;width:220px;bottom:17px;right:67px"}
           =link_to("Claim Your Cash", "javascript:void(0)", :class => 'forms claim btn', :style => "height:43px")
+    #fb-root
+    :javascript
+      window.fbAsyncInit = function() {
+        FB.init({appId: '213790775324755', status: true, cookie: true, xfbml: true});
+      };
+      (function() {
+        var e = document.createElement('script'); e.async = true;
+        e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+        document.getElementById('fb-root').appendChild(e);
+      }());
     = yield
     %footer{:class => "box container_12" }
     = render "layouts/signup"
