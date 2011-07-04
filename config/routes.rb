@@ -5,4 +5,5 @@ NewRails::Application.routes.draw do
   match 'product/:id' => "home#show", :as => "product"
   match 'about' => "home#about", :as => "about"
   match 'faqs' => "home#faqs", :as => "faq"  
+  match 'fb/:id' => "home#social"
 end

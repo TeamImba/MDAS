@@ -21,4 +21,9 @@ class HomeController < ApplicationController
     )
     render :nothing => true, :status => 200
   end
+  
+  def social
+    
+    render :nothing => true
+  end
 end
