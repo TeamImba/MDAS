@@ -4,6 +4,7 @@ NewRails::Application.routes.draw do
   root :to => "home#index"
   match 'product/:id' => "home#show", :as => "product"
   match 'about' => "home#about", :as => "about"
-  match 'faqs' => "home#faqs", :as => "faq"  
-  match 'fb/:id' => "home#social"
+  match 'faqs' => "home#faqs", :as => "faq"
+  match 'privacy' => "home#privacy", :as => "privacy"
+  #match 'fb/:id' => "home#social"
 end
