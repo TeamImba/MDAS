@@ -5,7 +5,7 @@
       %h1 
         %img{:src => "http://images.multiply.com/multiply/verified/trusted-32.png", :width => "20px"}
         Shop from Trusted Multiply Sellers Like:
-      = image_tag("borderContent.png", :class => "imgborder")
+      %span{:class => "imgborder"}
       %ul{:class => "items"}
         - @products[0..11].each_with_index do |product, index|
           %li{:class => ((index.modulo(4) == 0)? "first " : (index.modulo(4) == 3 || index == @products.size - 1)? "last " : "") + "product"}

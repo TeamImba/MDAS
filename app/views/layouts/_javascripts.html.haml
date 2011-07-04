@@ -2,11 +2,18 @@
 :javascript
   $(document).ready(function(){
     $(".forms").colorbox({width:"600px", inline:true, href:"#signupform" });
-    $("input").live("blur", function(){
+    $("input[type!='checkbox']").live("blur", function(){
       if($(this).valid() == 0)
         $(this).css("background-color", "red");
       else
         $(this).css("background-color", "");
+    });
+    $("input[type='checkbox']").live("blur", function(){
+      console.log("S#!@#!#!#!#!#");
+      if($(this).valid() == 0)
+        $("#checkbox_text").css("color", "red");
+      else
+        $("#checkbox_text").css("color", "black");
     });
     $("#signup_form").validate({
      submitHandler: function(form){
@@ -38,6 +45,10 @@
         else
           $(this).css("background-color", "");
       });
+      if(!$('#checkbox').is(':checked'))
+        $("#checkbox_text").css("color", "red");
+      else
+        $("#checkbox_text").css("color", "black");
     });
     $(".viewmore").live("click", function(e){
       $("#other_items").slideDown("1500");

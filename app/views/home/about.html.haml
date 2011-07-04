@@ -1,10 +1,45 @@
 ﻿%section{:class => "content container"}
   %section{:id => "content", :class => "box container_12"}
     =render "layouts/left_pane"
-    %section{:class => "omega grid_9"}
-      %h1 About this site:
-      = image_tag("borderContent.png", :class => "imgborder")
-      %p{:class => "about"} This is an official Multiply Philippines promo site geared towards reaching out and engaging our customers. This is our way of supporting our merchants who've been with us all throughout and our way of encouraging you to support them-our local entrepreneurs.
+    %section{:id => "about", :class => "omega grid_9"}
+      %h1 About this site
+      %span{:class => "imgborder"}
+      %p{:class => "about"} This is an official Multiply Philippines promo site geared towards reaching out and engaging our customers. This is our way of supporting our merchants who've been with us all throughout and our way of encouraging you to support them—our local entrepreneurs.
       %p{:class => "about"} Over the years, Multiply has transitioned from your favorite social networking service to the Philippines' largest marketplace where you can practically find anything from the simplest shirt to the newest high-end gadgets and what have you.
+      %br
+      %br
+    %section{:id => "about", :class => "omega grid_9"}
+      %h1 Multiply Privacy Policy
+      %span{:class => "imgborder"}
+      %p{:class => "about"} The disclosure of personal information is always a sensitive issue and Multiply takes it very seriously. We consider it our highest priority to protect the privacy of our members. To that end, this privacy policy outlines the types of information Multiply collects and how that information is used in the operation of our site. All information that Multiply collects will adhere to this privacy policy and will be used for the sole purpose of providing you a highly personalized and interactive experience with our site. No personal information collected from our members will ever be sold or leased to any third party without the proper consent.
+      %p{:class => "about"} 
+        Questions regarding this privacy policy should be sent via email at 
+        %a{:href => "mailto:csph@multiply.com"} csph@multiply.com 
+      %h2 About the Information We Collect and How We Use it
+      %ol{:id => "tableofcontents"}
+        %li
+          %h3 1. Registration
+          %p{:class => "about"} To join the Multiply promo, we need to ask you for some details: Multiply user ID, Name, Age, Mobile Number, Address, E-mail.  Your Multiply ID and e-mail address is used to identify you in the Multiply system with your online purchase if you qualify for the promo.  Your shirt will be shipped to you with the address you’ve provided.  Multiply will never share your personal information with any non-registered user of our site or third party company or person without your explicit consent. 
+        %li
+          %h3 2. Consent and Modification 
+          %p{:class => "about"} By using this Site, you consent to the terms of our Privacy Policy and to Multiply’s processing of Personal Information for the purposes set forth herein.  If you do not agree to this Privacy Policy at any time, please do not use our Site.  Multiply reserves the right to update our privacy policy. Please check this page occasionally to make sure you are aware of any updates.
+        %li
+          %h3 3. Children
+          %p{:class => "about"} In compliance with the Children's Online Privacy Protection Act (COPPA), we will not knowingly provide access to Multiply to persons under the age of thirteen (13). If Multiply later learns that a member is under the age of thirteen (13) we will take appropriate steps to remove the member's information from the database and restrict the individual from future access to the Multiply service.
+      %h2 With Whom Information May Be Shared
+      %ol{:id => "tableofcontents"}
+        %li
+          %h3 1. Third Parties
+          %p{:class => "about"} Multiply will not sell or lease your personal information to third parties without your explicit consent, unless required by law. We may share your information with third parties under certain circumstances:
+          %p{:class => "about"}  if sharing your information is necessary to execute a specific request by you (e.g., purchasing premium services via credit card, in which case it would be necessary to share your information with a credit card processing company). In these specific cases third parties will not retain, share or store any personally identifiable information except to provide the specific services requested by you, and are bound by strict confidentiality agreements which limit their use of such information.
+          %p{:class => "about"}  if sharing your information is required by law or is necessary to respond to a subpoena, warrant or court order, or to protect the rights of Multiply or its members.
+          %p{:class => "about"}  if you give us explicit permission to share your information for any reason not stated in this privacy policy.
+        %li
+          %h3 2. Links to Other Web Sites
+          %p{:class => "about"} You may occasionally see links to other web sites on Multiply, either via advertisements or other third-party promotions or links posted by other Multiply members. Multiply is not responsible for the privacy practices of other sites you may visit through a link you found on Multiply. If you provide information directly to a party other than Multiply, different privacy policies may cover those parties' use of your information. Please review any company's privacy policy before disclosing your personal information.
+          
+      %h2 Security
+      %p{:class => "about"} Multiply has implemented security measures to protect member information from loss, misuse and alteration. We use industry-standard practices such as encrypted storage, firewalls and password protection systems to safeguard the confidentiality of your personal information. Each of our employees is aware of our security policies, and your information is only available to those employees who need it to perform their jobs.
+      
       %br
       =link_to("Shop at Multiply Marketplace", "http://multiply.com/marketplace?utm_source=semmicrosite%2B&utm_medium=link%2B&utm_campaign=semmicrosite%2B", :class => "shop btn", :rel => "external", :target => "_blank")

@@ -49,8 +49,9 @@ header{background:url('/images/banner.png') no-repeat;height:364px;}
   }
 }
 #content{padding-top:40px;}
-h1, h2{font-family: "Arial Black";font-size:20px;color:#456e9b;text-shadow: 0px 1px 0px #fff;float:left;width:100%;text-align: left;}
-h2{font-size:16px;}
+h1, h2, #about h3 {font-family: "Arial Black";font-size:20px;color:#456e9b;text-shadow: 0px 1px 0px #fff;float:left;width:100%;text-align: left;}
+h2{font-size:16px; margin-top:5px;margin-bottom:5px;}
+#about h3{font-size:14px; margin-top:5px;margin-bottom:5px;}
 .imgborder{background:url('/images/buttons.png') 0 0;height:5px;width:700px;float:left;margin:20px 0;}
 .items{
   float:left;
@@ -233,6 +234,15 @@ header{background:url('/images/banner.png') no-repeat;height:364px;}
 //.claim:hover{background:url('/images/buttons.png') 0px -65px;width:220px;height:53px;float:left;}
 //.submit:hover{background:url('/images/buttons.png') -922px -65px;width:220px;height:53px;float:left;margin-left:180px;margin-top:10px;}
 
+#about p,#faqs{font-family:Helvetica,Arial;text-align:left;color:#777;font-size:14px;line-height: 20px;}
+#faqs{margin-top:20px;}
+#tableofcontents{margin-bottom:20px;}
+#faqs ol li{margin-bottom:20px;font-weight: bold;}
+#faqs ul{margin-left:15px;margin-top:15px;}
+#faqs ul li{font-weight:normal;}
+
+#faqs a{color:#456e9b}
+#signupform h2{margin-top:0px !important;}
 
 /*
     ColorBox Core Style:

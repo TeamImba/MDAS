@@ -13,11 +13,12 @@ class HomeController < ApplicationController
   
   def create
     UserSignup.create(
-      :email => params[:email], 
       :multiply_user_id => params[:muid],
-      :last_name => params[:ln],
-      :first_name => params[:fn],
-      :mobile_number => params[:mob]
+      :name => params[:name],
+      :age  => params[:age],
+      :contact_number => params[:num],
+      :address => params[:add],
+      :size_of_shirt => params[:size]
     )
     render :nothing => true, :status => 200
   end
