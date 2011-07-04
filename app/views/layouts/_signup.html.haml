@@ -4,7 +4,7 @@
       %section{ :id => "logo"}
         &nbsp;
         =link_to(image_tag("multiply.png"), "http://multiply.com?utm_source=semmicrosite%2B&utm_medium=link%2B&utm_campaign=semmicrosite%2B")
-    %h3{:class => "register"} Register and get a chance to win Php 1,000,000!
+    %h3{:class => "register"} Register to get your shirt now!
     %span{:class => "imgborder"} 
     =form_tag(home_path, :id => "signup_form") do
       %ul{ :id => "signup"}
@@ -12,37 +12,45 @@
           %ul
             %li{ :class => "label"}
               %h2
-                Multiply User ID
+                Multiply ID
                 %span{ :class => "red"} *
             %li{ :class => "textfield"}=text_field_tag("muid", "", :placeholder => "kimstore", :class => "required")
         %li{ :class => "signupForm"}
           %ul
             %li{ :class => "label"}
               %h2
-                First Name
+                Name
                 %span{ :class => "red"} *
-            %li{ :class => "textfield"}=text_field_tag("fn", "", :placeholder => "John", :class => "required")
+            %li{ :class => "textfield"}=text_field_tag("fn", "", :placeholder => "John Doe", :class => "required")
         %li{ :class => "signupForm"}
           %ul
             %li{ :class => "label"}
               %h2
-                Last Name
+                Age
                 %span{ :class => "red"} *
-            %li{ :class => "textfield"}=text_field_tag("ln", "", :placeholder => "Doe", :class => "required")
+            %li{ :class => "textfield"}=text_field_tag("age", "", :placeholder => "18", :class => "required digits")
         %li{ :class => "signupForm"}
           %ul
             %li{ :class => "label"}
               %h2
-                Email
+                Contact Number
                 %span{ :class => "red"} *
-            %li{ :class => "textfield"}=text_field_tag("email", "", :placeholder => "john.doe@mail.com", :class => "required email")
+            %li{ :class => "textfield"}=text_field_tag("num", "", :placeholder => "6300012345678", :class => "required digits")
         %li{ :class => "signupForm"}
           %ul
             %li{ :class => "label"}
               %h2
-                Mobile Number
+                Address
                 %span{ :class => "red"} *
-            %li{ :class => "textfield"}=text_field_tag("mob", "", :placeholder => "6399912345678", :class => "required digits")
+            %li{ :class => "textfield"}=text_field_tag("add", "", :placeholder => "1 San Miguel Ave", :class => "required")
+        %li{ :class => "signupForm"}
+          %ul
+            %li{ :class => "label"}
+              %h2
+                Size of Shirt
+                %span{ :class => "red"} *
+            %li{ :class => "textfield"}=text_field_tag("size", "", :placeholder => "Small", :class => "required")
+        
       %button{:class => "registered submit btn", :type => "submit", :id => "submit_btn"} Submit
       =image_tag("loading.gif", :id => "submit_loader")
     #signupDet
