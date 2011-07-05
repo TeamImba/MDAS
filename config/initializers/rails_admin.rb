@@ -31,14 +31,17 @@ RailsAdmin.config do |config|
   config.model ProductAnalytic do
     visible { false }
   end
+  config.model User do
+    visible { false }
+  end
+  
   config.model UserSignup do
     list do 
-      field :full_name
+      field :name
       field :multiply_user_id do
         label "Multiply User ID"
       end
-      field :email
-      field :mobile_number
+      field :contact_number
     end
   end
   
