@@ -6,8 +6,8 @@ RailsAdmin.config do |config|
       field :name
       field :product_url
       field :image_url
-      field :utm
       field :seller
+      field :position
       field :view_count do
         partial "disable_product_view_count"
       end
@@ -16,8 +16,8 @@ RailsAdmin.config do |config|
       field :name
       field :product_url
       field :image_url
-      field :utm
       field :seller
+      field :position
       field :view_count do
         partial "disable_product_view_count"
       end
@@ -25,6 +25,7 @@ RailsAdmin.config do |config|
     list do
       field :name
       field :view_count
+      field :position
     end
   end
   
