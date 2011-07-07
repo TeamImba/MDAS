@@ -8,6 +8,8 @@ RailsAdmin.config do |config|
       field :image_url
       field :seller
       field :position
+      field :week_number
+      field :category
       field :view_count do
         partial "disable_product_view_count"
       end
@@ -18,6 +20,8 @@ RailsAdmin.config do |config|
       field :image_url
       field :seller
       field :position
+      field :week_number
+      field :category
       field :view_count do
         partial "disable_product_view_count"
       end
@@ -26,6 +30,8 @@ RailsAdmin.config do |config|
       field :name
       field :view_count
       field :position
+      field :week_number
+      field :category
     end
   end
   
@@ -43,6 +49,7 @@ RailsAdmin.config do |config|
         label "Multiply User ID"
       end
       field :contact_number
+      field :created_at
     end
   end
   

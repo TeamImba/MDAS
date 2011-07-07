@@ -1,7 +1,12 @@
 class HomeController < ApplicationController
 
   def index
-    @products = Product.order("position")
+    
+    @products = Product.where("week_number = #{Time.now.strftime("%U")}").order("position")
+    if @products.empty?
+      max = Product.max("week_number")
+      @products = Product.where("week_number = #{max}").order("position")
+    end
   end
   
   def show
