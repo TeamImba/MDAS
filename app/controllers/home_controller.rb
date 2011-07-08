@@ -4,8 +4,9 @@ class HomeController < ApplicationController
     
     @products = Product.where("week_number = #{Time.now.strftime("%U")}").order("position")
     if @products.empty?
-      max = Product.max("week_number")
-      @products = Product.where("week_number = #{max}").order("position")
+      #max = Product.max("week_number")
+      #@products = Product.where("week_number = #{max}").order("position")
+      @products = Product.order("position")
     end
   end
   
