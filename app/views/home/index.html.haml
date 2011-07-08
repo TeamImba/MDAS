@@ -7,7 +7,13 @@
         Shop from Trusted Multiply Sellers Like:
       %span{:class => "imgborder"}
       %ul{:class => "items"}
-        - @products[0..11].each_with_index do |product, index|
+        - @products[0..15].each_with_index do |product, index|
+          - if index >= 3
+            %p{:style => "text-align:left;"}
+              - if index == 0
+                Clothes 
+              - else
+                Gadgets
           %li{:class => ((index.modulo(4) == 0)? "first " : (index.modulo(4) == 3 || index == @products.size - 1)? "last " : "") + "product"}
             .placeholder
               = link_to(image_tag(product.image_url, :alt => product.name, :title => "Buy #{product.name}", :width => "148px", :height => "140px"), product_url(product.permalink), :target => "_blank", :rel => "external")
@@ -17,7 +23,7 @@
             =link_to(product.seller, "http://#{product.seller.delete(" ").downcase}.multiply.com", :target => "_blank", :rel => "external")
       %ul{:class => "items", :id => "other_items", :style => "display:none;"}
         - begin
-          - @products[12..-1].each_with_index do |product, index|
+          - @products[16..-1].each_with_index do |product, index|
             %li{:class => ((index.modulo(4) == 0)? "first " : (index.modulo(4) == 3 || index == @products.size - 1)? "last " : "") + "product"}
               .placeholder
                 = link_to(image_tag(product.image_url, :alt => product.name, :title => "Buy #{product.name}", :width => "148px", :height => "140px"), product_url(product.permalink), :target => "_blank", :rel => "external")
