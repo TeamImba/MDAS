@@ -17,6 +17,10 @@ class HomeController < ApplicationController
     redirect_to  "#{@product.product_url}?utm_source=semmicrosite%2B&utm_medium=link%2B&utm_campaign=semmicrosite%2B"
   end
   
+  def signup
+    create if request.post?
+  end
+  
   def create
     UserSignup.create(
       :multiply_user_id => params[:muid],
@@ -26,7 +30,7 @@ class HomeController < ApplicationController
       :address => params[:add],
       :size_of_shirt => params[:size]
     )
-    render :nothing => true, :status => 200
+    render "signup_complete"
   end
   
   def social

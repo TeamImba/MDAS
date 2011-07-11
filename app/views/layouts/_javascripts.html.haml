@@ -1,7 +1,7 @@
 = javascript_include_tag "jquery.min", "jquery.colorbox.min", "jquery.validate.min", "http://platform.twitter.com/widgets.js", "https://apis.google.com/js/plusone.js"
 :javascript
   $(document).ready(function(){
-    $(".forms").colorbox({width:"600px", inline:true, href:"#signupform" });
+    //$(".forms").colorbox({width:"600px", inline:true, href:"#signupform" });
     $("input[type!='checkbox']").live("blur", function(){
       if($(this).valid() == 0)
         $(this).css("background-color", "red");
@@ -9,33 +9,16 @@
         $(this).css("background-color", "");
     });
     $("input[type='checkbox']").live("blur", function(){
-      console.log("S#!@#!#!#!#!#");
       if($(this).valid() == 0)
         $("#checkbox_text").css("color", "red");
       else
         $("#checkbox_text").css("color", "black");
     });
     $("#signup_form").validate({
-     submitHandler: function(form){
-      $("#submit_btn").attr("disabled", true);
-      $.ajax({
-        type: 'POST',
-        url: '/home',
-        data: $("#signup_form").serialize(),
-        beforeSend: function(){
-          $("#submit_loader").show();
-        },
-        success: function(){
-          $.colorbox({width:"400px;", inline:true, href:"#registeredBox"});
-        },
-        complete:function(){
-          $("#submit_loader").hide();
-          $("input").each(function(){
-            $(this).val("");
-          });
-        }
-      });
-     }
+      submitHandler: function(form){
+        $("#submit_btn").attr("disabled", true);
+        form.submit();
+      }
     });
     $("#signup_form").live("submit", function(e){
       e.preventDefault();

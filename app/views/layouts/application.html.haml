@@ -16,10 +16,10 @@
     %section{:class => "header container"}
       %header{:class => "box container_12", :style => "height:250px;position:relative"}
         %span{:id => "dti"}
-          Per DTI NCR Permit # XXXX Series of 2011. 
+          Per DTI-NCR Permit #6788 Series of 2011. 
           =link_to("Click here for details.", promo_url)
         %aside{:class => "alpha grid_3", :style => "position:absolute;width:220px;bottom:10px;right:20px"}
-          =link_to("Claim Your Shirt", "javascript:void(0)", :class => 'forms claim btn', :style => "height:43px")
+          =link_to("Claim Your Shirt", registration_url, :class => 'forms claim btn', :style => "height:43px")
     #fb-root
     :javascript
       window.fbAsyncInit = function() {
@@ -32,6 +32,6 @@
       }());
     = yield
     %footer{:class => "box container_12" }
-    = render "layouts/signup"
-    = render "layouts/signup_complete"
+    /= render "layouts/signup"
+    /= render "layouts/signup_complete"
     = render "layouts/javascripts"

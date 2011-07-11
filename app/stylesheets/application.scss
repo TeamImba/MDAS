@@ -100,6 +100,7 @@ li.last{margin-right:0;}
   color:#5b5b5b;
   font-size:13px;
   padding-right:10px;
+  color: white;
 }
 #posts-list li{
   float:left;
@@ -113,20 +114,25 @@ li.last{margin-right:0;}
 }
 
 #howtoBox{
-  background:#f2f2f0;
+  background:#507093;
   width:220px;
   float:left;
   padding:5px 0px 0px;
   h2{
     padding:20px 10px;
+    color: white !important;
+    text-shadow: 0px 1px 0px black;
   }
   a{
-    font-size:12px;
-    color:#2e639d;
+    font-size:15px;
+    color:white;
     text-decoration: none;
     font-family: Helvetica, Arial;
     font-weight: bold;
     margin-left:3px;
+    float: left;
+    padding-bottom:5px;
+    padding-left:15px;
     img{
       vertical-align:bottom;
     }
@@ -154,7 +160,7 @@ li.label{
 }
 li.textfield{float:left;margin-left:20px;}
 .textfield input{-moz-box-shadow: 0px 0px 3px #aaa;-webkit-box-shadow: 0px 0px 3px #aaa;box-shadow: 0px 0px 3px #aaa;padding:5px 2px;font-size:20px;color:#777;border:1px solid #666;width:300px;}
-#signupDet{float:left;font-size:11px;font-family: Helvetica, Arial;width:100%;}
+#signupDet{float:left;font-size:11px;font-family: Helvetica, Arial;width:100%;text-align:left;}
 
 #registered{
   background:#eae9e6;width:350px;margin:0 auto;text-align:center;padding-bottom:20px;
@@ -250,6 +256,10 @@ header{background:url('/images/banner.png') no-repeat;height:364px;}
 }
 
 .item-title{text-align:left; font-family: Helvetica, Arial; color: #5B5B5B;font-size: 13px;}
+.sign_in_link{text-align:center;}
+#checkbox_text{padding-top: 10px;width: 320px;text-align: left;font-family: Helvetica, Arial;color:#777;font-size:14px;line-height: 20px;}
+
+
 /*
     ColorBox Core Style:
     The following CSS is consistent between example themes and should not be altered.

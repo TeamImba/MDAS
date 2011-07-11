@@ -1,12 +1,12 @@
-%div{ :style => "display:none"}
-  #registeredBox{ :style => "background:#eae9e6;overflow:hidden"}
-    %section{ :class => "nav formheader"}
-      %section{ :id => "logo"}
-        &nbsp;
-        =link_to(image_tag("multiply.png"), "http://multiply.com?utm_source=semmicrosite%2B&utm_medium=link%2B&utm_campaign=semmicrosite%2B")
+%section{:class => "content container"}
+  %section{:id => "content", :class => "box container_12"}
+    =render "layouts/left_pane"
+    %section{:class => "omega grid_9"}
+      %h1 Register to get your Multiply Tee now!
+      %span{:class => "imgborder"}
     %section{ :id => "registered" }
       %p
-        %strong Hey, thanks for registering!
+        %strong Hey #{params[:name]}, sit back and wait for your Multiply Tee!
         %br/
         %br/
         Thank you for registering with us. We are currently verifying if you are a qualified participant.  Please expect a PM from us within business 7 days. Thank you.
