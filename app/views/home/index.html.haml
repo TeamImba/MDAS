@@ -9,14 +9,6 @@
       %ul{:class => "items"}
         - @products[0..15].each_with_index do |product, index|
           %li{:class => ((index.modulo(4) == 0)? "first " : (index.modulo(4) == 3 || index == @products.size - 1)? "last " : "") + "product"}
-            - if index <= 3
-              %p{:class => "item-title"}
-                - if index == 0
-                  Clothes 
-                - elsif index == 2
-                  Gadgets
-                - else
-                  &nbsp;
             .placeholder
               = link_to(image_tag(product.image_url, :alt => product.name, :title => "Buy #{product.name}", :width => "148px", :height => "140px"), product_url(product.permalink), :target => "_blank", :rel => "external")
             =link_to(product.name, product_url(product.permalink), :target => "_blank", :rel => "external")
