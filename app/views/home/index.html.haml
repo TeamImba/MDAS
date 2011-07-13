@@ -27,7 +27,7 @@
               =link_to(product.seller, "http://#{product.seller.delete(" ").downcase}.multiply.com", :target => "_blank", :rel => "external")
         - rescue
       %span{:class => "imgborder"}
-      =link_to("View More items from Multiply Trusted Sellers", "javascript:void(0)", :class => "viewmore btn")
+      =link_to("View More items from Multiply Trusted Sellers", "javascript:void(0)", :class => "viewmore btn") if @products.size > 16
       %br
       %br
       =link_to("Shop at Multiply Marketplace", "http://multiply.com/marketplace?utm_source=semmicrosite%2B&utm_medium=link%2B&utm_campaign=semmicrosite%2B", :class => "shop btn", :rel => "external", :target => "_blank")
