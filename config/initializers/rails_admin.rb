@@ -49,7 +49,12 @@ RailsAdmin.config do |config|
         label "Multiply User ID"
       end
       field :contact_number
-      field :created_at
+      field :created_at_date do
+        label "Date"
+      end
+      field :created_at_time do
+        label "Time"
+      end
     end
   end
   
